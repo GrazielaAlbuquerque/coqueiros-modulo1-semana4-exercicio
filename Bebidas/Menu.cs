@@ -19,8 +19,8 @@ namespace Bebidas
 
         public static int SelecionarOpcao()
         {
-            try
-            {
+           try
+           {
                 Console.WriteLine("Selecione a opção desejada :");
                 Console.WriteLine("1 - Inserir Bebida");
                 Console.WriteLine("2 - Alterar Bebida");
@@ -34,13 +34,15 @@ namespace Bebidas
                 Console.WriteLine("Opção :");
                 return Convert.ToInt32(Console.ReadLine());
             }
-            catch (Exception ex)
-            {
+          catch (Exception ex)
+           {
                 Console.WriteLine("Opção com erro, selecione a correta");
+                Console.ReadLine();
             }
 
            return SelecionarOpcao();
         }
+
 
 
         public static bool ReiniciarDisplayConsole()
