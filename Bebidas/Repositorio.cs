@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-//using Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,16 +65,19 @@ namespace Bebidas
             }
         }
 
-        public static List<Bebida> Listar()
+        public static void ImprimirDados()
         {
-            return ListaBebidas;
+            foreach (var bebida in ListaBebidas)
+            {
+                bebida.ImprimirDados();
+            }
         }
 
         public static void ImprimirSuco()
         {
             foreach (var suco in ListaSuco)
             {
-                suco.ImprimirSuco();
+                suco.ImprimirDados();
             }
         }
 
@@ -84,7 +85,7 @@ namespace Bebidas
         {
             foreach (var refrigerante in ListaRefrigerante)
             {
-                refrigerante.ImprimirRefrigerante();
+                refrigerante.ImprimirDados();
             }
         }
     }

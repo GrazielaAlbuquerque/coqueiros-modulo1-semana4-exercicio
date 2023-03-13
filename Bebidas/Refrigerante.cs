@@ -1,4 +1,7 @@
-using Bebidas;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Bebidas
 {
@@ -6,13 +9,12 @@ namespace Bebidas
     {
         public bool Vidro{ get; set; }
 
-       /* public Refrigerante (bool vidro, int id, string tipoBebida, decimal miliLitro, string nomeBebida, decimal valorCompra) : base (id, tipo, miliLitros, nomeBebida, valorCompra)
+       public Refrigerante (bool vidro, int id, string tipo, decimal miliLitro, string nomeBebida, decimal valorCompra) : base (id, tipo, miliLitro, nomeBebida,valorCompra)
          { 
              Vidro = vidro;
-             Tipo = "Refrigerante";
-         }*/
+         }
 
-        public void ImprimirRefrigerante()
+        public override void ImprimirDados()
         {
             if (Vidro == true)
             {   
