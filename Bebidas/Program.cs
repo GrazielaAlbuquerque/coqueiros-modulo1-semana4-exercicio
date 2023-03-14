@@ -1,51 +1,58 @@
 using Bebidas;
 
-int opcaoEscolhida = 0;
+//int opcaoEscolhida = 0;
+bool showMenu = true;
 
-while (opcaoEscolhida != 7)
+while (showMenu)
 {
     Menu.DisplayInicial();
-    opcaoEscolhida = Menu.SelecionarOpcao();
+    var opcaoEscolhida = Menu.SelecionarOpcao();
     
+    //Bebida bebida = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
+
     switch (opcaoEscolhida)
     {
         case 1:
+            Bebida bebida = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
+            Repositorio.InserirBebida(bebida);
             Console.WriteLine("Você escolheu 'Inserir Bebida'! Precisamos coletar algumas informações:");            
-            Menu.InserirBebida();
             Menu.DisplayInicial();
             break;
 
         case 2:
+            Bebida bebida1 = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
             Console.WriteLine("Você escolheu 'Alterar Bebida'! Precisamos coletar algumas informações:");
-            Menu.AlterarBebida();
+            Repositorio.AlterarBebida(bebida1);
             Menu.DisplayInicial();
             break;
 
         case 3:
+            Bebida bebida2 = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
             Console.WriteLine("Você escolheu 'Excluir Bebida'! Informe o Id da bebida:");
-            Menu.ExcluirBebida();
+            Repositorio.ExcluirBebida(bebida2.Id);
             Menu.DisplayInicial();
             break;
 
         case 4:
             Console.WriteLine("Você escolheu 'Listar todas as bebidas'!");
-            Repositorio.ImprimirDados();
+            Repositorio.ListarBebida();
             Menu.DisplayInicial();
             break;
 
         case 5:
             Console.WriteLine("Você escolheu 'Listar todos os sucos'!");
-            Repositorio.ImprimirSuco();
+            Repositorio.ListarSuco();
             Menu.DisplayInicial();
             break;
 
         case 6:
             Console.WriteLine("Você escolheu 'Listar todos os refrigerantes'!");
-            Repositorio.ImprimirRefrigerante();
+            Repositorio.ListarRefrigerante();
             Menu.DisplayInicial();
             break;
         case 7:
-            Console.Write("Obrigada pela preferência!");            
+            Console.Write("Obrigada pela preferência!"); 
+            showMenu = false;           
             break;
 
         default:

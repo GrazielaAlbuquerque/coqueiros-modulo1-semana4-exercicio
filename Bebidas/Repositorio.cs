@@ -37,25 +37,22 @@ namespace Bebidas
         {
             ListaRefrigerante.Add(refrigerante);
         }
-
-
-        
-        public static void AdicionarBebida(Bebida bebida)
+ 
+        public static void InserirBebida(Bebida bebida)
         {
-             ListaBebidas.Add(bebida);
+            ListaBebidas.Add(bebida);
         }
-
         public static void AlterarBebida(Bebida bebida)
         {
 
             foreach (var item in ListaBebidas.Where(listaEmMemoria => listaEmMemoria.Id == bebida.Id)) 
             {
                 item.NomeBebida = bebida.NomeBebida;
-                item.Tipo = bebida.Tipo;
-                item.MiliLitro = bebida.MiliLitro;
+               // item.Tipo = bebida.Tipo;
+                //item.MiliLitro = bebida.MiliLitro;
             }
         }
-
+        
         public static void ExcluirBebida(int id)
         {
             var localBebida = ListaBebidas.FirstOrDefault(w => w.Id == id);
@@ -65,14 +62,26 @@ namespace Bebidas
             }
         }
 
-        public static void ImprimirDados()
-        {
-            foreach (var bebida in ListaBebidas)
-            {
-                bebida.ImprimirDados();
-            }
-        }
+        //public static void ImprimirDados()
+        //{
+          //  foreach (var bebida in ListaBebidas)
+           // {
+           //     bebida.ImprimirDados();
+           // }
+        //}
 
+        public static List<Bebida> ListarBebida()
+        {
+            return ListaBebidas;
+        }
+        public static List<Suco> ListarSuco()
+        {
+            return ListaSuco;
+        }
+        public static List<Refrigerante> ListarRefrigerante()
+        {
+            return ListaRefrigerante;
+        }
         public static void ImprimirSuco()
         {
             foreach (var suco in ListaSuco)

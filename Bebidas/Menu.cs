@@ -33,7 +33,7 @@ namespace Bebidas
                 Console.WriteLine("Opção :");
                 return Convert.ToInt32(Console.ReadLine());
             }
-          catch (Exception ex)
+          catch (Exception /*ex*/)
            {
                 Console.WriteLine("Opção com erro, selecione a correta");
                 Console.ReadLine();
@@ -41,39 +41,6 @@ namespace Bebidas
 
            return SelecionarOpcao();
         }
-
-
-        public static void InserirBebida(string tipo, decimal miliLitro, string nomeBebida, decimal valorCompra)
-        {
-                Console.Write("Favor informar os dados da bebida a ser adicionada:");
-                Console.Write("Qual tipo de bebida quer adicionar?");
-                tipo = Console.ReadLine();
-                Console.Write("Informe a quantidade de ml da bebida:\n");
-                nomeBebida = 
-        }
-
-        public static void AlterarBebida(Bebida bebida)
-        {
-
-            foreach (var item in Repositorio.ListaBebidas.Where(listaEmMemoria => listaEmMemoria.Id == bebida.Id)) 
-            {
-                item.NomeBebida = bebida.NomeBebida;
-                item.Tipo = bebida.Tipo;
-                item.MiliLitro = bebida.MiliLitro;
-            }
-        }
-
-        public static void ExcluirBebida(int id)
-        {
-            var localBebida = Repositorio.ListaBebidas.FirstOrDefault(w => w.Id == id);
-            if (localBebida != null)
-            {
-                Repositorio.ListaBebidas.Remove(localBebida);
-            }
-        }
-
-
-
 
         public static bool ReiniciarDisplayConsole()
         {

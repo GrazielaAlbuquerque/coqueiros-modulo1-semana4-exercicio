@@ -28,9 +28,9 @@ namespace Bebidas
             Console.WriteLine($"Valor compra da bebida Id {Id} foi alterado para {ValorCompra}.");
         }
 
-        public virtual void ImprimirDados()
-        {
-            Console.WriteLine($"O produto id {Id} é uma bebida com quantidade de {MiliLitro} MiliLitros");            
-        }
+        //public virtual void ImprimirDados()
+        //{
+           // Console.WriteLine($"O produto id {Id} é uma bebida com quantidade de {MiliLitro} MiliLitros");            
+       // }
     }
 }

@@ -14,7 +14,7 @@ namespace Bebidas
              Vidro = vidro;
          }
 
-        public override void ImprimirDados()
+        public void ImprimirDados()
         {
             if (Vidro == true)
             {   
