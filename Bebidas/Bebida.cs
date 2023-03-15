@@ -14,6 +14,11 @@ namespace Bebidas
         public string NomeBebida {get; set; }
         public decimal ValorCompra {get; set; }
 
+        public Bebida()
+        {
+            
+        }
+
         public Bebida (int id, string tipo, decimal miliLitro, string nomeBebida, decimal valorCompra)
         {
             Id = id;
