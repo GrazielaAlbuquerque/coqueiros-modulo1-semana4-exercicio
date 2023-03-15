@@ -9,7 +9,7 @@ namespace Bebidas
     {
         public static void DisplayInicial()
         {
-            Console.Clear(); 
+         //   Console.Clear(); 
             Console.WriteLine("\n"); 
             Console.WriteLine("LOJA DE BEBIDAS:"); 
             Console.WriteLine("*******************************************************"); 

@@ -13,10 +13,11 @@ while (showMenu)
     switch (opcaoEscolhida)
     {
         case 1:
+  
             Bebida bebida = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
             Repositorio.InserirBebida(bebida);
-            Console.WriteLine("Você escolheu 'Inserir Bebida'! Precisamos coletar algumas informações:");            
-            Menu.DisplayInicial();
+            Console.WriteLine("Você escolheu 'Inserir Bebida'! Precisamos coletar algumas informações:");  
+   //         Menu.DisplayInicial();
             break;
 
         case 2:

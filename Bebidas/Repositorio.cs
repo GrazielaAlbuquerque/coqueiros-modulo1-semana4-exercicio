@@ -1,3 +1,4 @@
+//using Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,8 @@ namespace Bebidas
  
         public static void InserirBebida(Bebida bebida)
         {
+            Console.WriteLine("Qual o nome?");
+            Console.ReadLine();    
             ListaBebidas.Add(bebida);
         }
         public static void AlterarBebida(Bebida bebida)
