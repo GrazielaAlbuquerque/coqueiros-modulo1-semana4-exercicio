@@ -95,11 +95,13 @@ namespace Bebidas
         public static void ListarBebida()
         {
             foreach (var item in ListaBebidas)
+            {
             Console.WriteLine("Id: " + item.Id);
-           /* Console.WriteLine("Tipo: " + item.Tipo);
+            Console.WriteLine("Tipo: " + item.Tipo);
             Console.WriteLine("MiliLitros: " + item.MiliLitro);
-            Console.WriteLine("Valor: " + item.Valor);*/
+            Console.WriteLine("Valor: " + item.ValorCompra);
             return;
+            }
         }
         public static List<Suco> ListarSuco()
         {
