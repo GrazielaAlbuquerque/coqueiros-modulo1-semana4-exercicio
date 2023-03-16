@@ -31,9 +31,24 @@ namespace Bebidas
             }
         }
         public static void AdicionarSuco(Suco suco)
-        {
+            {
+            Console.WriteLine("Você selecionou adicinar suco, vamos preencher algumas informações ");
+            Console.WriteLine("Tamanho da caixa:");
+            suco.TipoCaixa = Console.ReadLine();
+            Console.WriteLine("Id:");
+            suco.Id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Tipo do suco:");
+            suco.Tipo = Console.ReadLine();
+            Console.WriteLine("Mililitros:");
+            suco.MiliLitro = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Nome da bebida:");
+            suco.NomeBebida = Console.ReadLine();
+            Console.WriteLine("Valor:");
+            suco.ValorCompra = decimal.Parse(Console.ReadLine());
             ListaSuco.Add(suco);
+            Console.WriteLine($"Suco {suco.NomeBebida} adicionado.");
         }
+
         public static void AdicionarRefrigerante(Refrigerante refrigerante)
         {
             ListaRefrigerante.Add(refrigerante);
@@ -73,9 +88,18 @@ namespace Bebidas
            // }
         //}
 
-        public static List<Bebida> ListarBebida()
+        //public static List<Bebida> ListarBebida()
+       // {
+        //    return ListaBebidas;
+       // }
+        public static void ListarBebida()
         {
-            return ListaBebidas;
+            foreach (var item in ListaBebidas)
+            Console.WriteLine("Id: " + item.Id);
+           /* Console.WriteLine("Tipo: " + item.Tipo);
+            Console.WriteLine("MiliLitros: " + item.MiliLitro);
+            Console.WriteLine("Valor: " + item.Valor);*/
+            return;
         }
         public static List<Suco> ListarSuco()
         {

@@ -8,10 +8,6 @@ namespace Bebidas
     public class Suco : Bebida
     {
            public string TipoCaixa { get; set; }
-           /*public Suco()
-           {
-            
-           }*/
 
            public Suco (string tipoCaixa, int id, string tipo, decimal miliLitro, string nomeBebida, decimal valorCompra ) : base (id, tipo, miliLitro, nomeBebida,valorCompra)
            {

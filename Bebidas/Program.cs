@@ -3,6 +3,7 @@ using Bebidas;
 //int opcaoEscolhida = 0;
 bool showMenu = true;
 
+Bebida bebida = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
 while (showMenu)
 {
     Menu.DisplayInicial();
@@ -13,43 +14,40 @@ while (showMenu)
     switch (opcaoEscolhida)
     {
         case 1:
-  
-            Bebida bebida = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
-            Repositorio.InserirBebida(bebida);
             Console.WriteLine("Você escolheu 'Inserir Bebida'! Precisamos coletar algumas informações:");  
+            Repositorio.InserirBebida(bebida);
    //         Menu.DisplayInicial();
             break;
 
         case 2:
-            Bebida bebida1 = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
             Console.WriteLine("Você escolheu 'Alterar Bebida'! Precisamos coletar algumas informações:");
-            Repositorio.AlterarBebida(bebida1);
-            Menu.DisplayInicial();
+            Repositorio.AlterarBebida(bebida);
+            Console.ReadLine();
+            //Menu.DisplayInicial();
             break;
 
         case 3:
-            Bebida bebida2 = new Bebida(1, "Cerveja", 10,"Patagonia", 10);
             Console.WriteLine("Você escolheu 'Excluir Bebida'! Informe o Id da bebida:");
-            Repositorio.ExcluirBebida(bebida2.Id);
-            Menu.DisplayInicial();
+            Repositorio.ExcluirBebida(bebida.Id);
+           // Menu.DisplayInicial();
             break;
 
         case 4:
             Console.WriteLine("Você escolheu 'Listar todas as bebidas'!");
             Repositorio.ListarBebida();
-            Menu.DisplayInicial();
+            //Menu.DisplayInicial();
             break;
 
         case 5:
             Console.WriteLine("Você escolheu 'Listar todos os sucos'!");
             Repositorio.ListarSuco();
-            Menu.DisplayInicial();
+            //Menu.DisplayInicial();
             break;
 
         case 6:
             Console.WriteLine("Você escolheu 'Listar todos os refrigerantes'!");
             Repositorio.ListarRefrigerante();
-            Menu.DisplayInicial();
+           // Menu.DisplayInicial();
             break;
         case 7:
             Console.Write("Obrigada pela preferência!"); 
