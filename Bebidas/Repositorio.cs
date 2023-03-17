@@ -1,3 +1,4 @@
+
 //using Internal;
 using System;
 using System.Collections.Generic;
@@ -62,12 +63,33 @@ namespace Bebidas
         }
         public static void AlterarBebida(Bebida bebida)
         {
-
-            foreach (var item in ListaBebidas.Where(listaEmMemoria => listaEmMemoria.Id == bebida.Id)) 
+            if (ListaBebidas.Count > 0)
             {
-                item.NomeBebida = bebida.NomeBebida;
-               // item.Tipo = bebida.Tipo;
-                //item.MiliLitro = bebida.MiliLitro;
+
+                    Console.WriteLine("Informe o Id da bebida a ser alterada: ");
+                    int buscarId = int.Parse(Console.ReadLine());
+                    foreach (var item in ListaBebidas)
+               {
+                    if (item.Id == buscarId)
+                    {
+                        ListaBebidas.Remove(item);
+                        Console.WriteLine("Vamos alterar a bebida: ");
+                        bebida.Id = buscarId;
+                        Console.WriteLine("Tipo: ");
+                        bebida.Tipo = Console.ReadLine();
+                        Console.WriteLine("MiliLitros: ");
+                        bebida.MiliLitro = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine("Nome da bebida: ");
+                        bebida.NomeBebida = Console.ReadLine();
+                        Console.WriteLine("Valor de compra: ");
+                        bebida.ValorCompra = decimal.Parse(Console.ReadLine());
+                        ListaBebidas.Add(bebida);
+                        Console.WriteLine("Bebida foi alterada!");
+                        Console.ReadLine();
+
+                    }
+
+                }
             }
         }
         
@@ -79,6 +101,7 @@ namespace Bebidas
                 ListaBebidas.Remove(localBebida);
             }
         }
+        
 
         //public static void ImprimirDados()
         //{
@@ -92,7 +115,7 @@ namespace Bebidas
        // {
         //    return ListaBebidas;
        // }
-        public static void ListarBebida()
+        public static void ListarBebida(Bebida bebida)
         {
             foreach (var item in ListaBebidas)
             {
@@ -100,7 +123,8 @@ namespace Bebidas
             Console.WriteLine("Tipo: " + item.Tipo);
             Console.WriteLine("MiliLitros: " + item.MiliLitro);
             Console.WriteLine("Valor: " + item.ValorCompra);
-            return;
+            Console.ReadLine();
+            //return;
             }
         }
         public static List<Suco> ListarSuco()

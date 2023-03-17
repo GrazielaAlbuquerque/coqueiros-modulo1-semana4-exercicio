@@ -22,8 +22,7 @@ while (showMenu)
         case 2:
             Console.WriteLine("Você escolheu 'Alterar Bebida'! Precisamos coletar algumas informações:");
             Repositorio.AlterarBebida(bebida);
-            Console.ReadLine();
-            //Menu.DisplayInicial();
+            Menu.DisplayInicial();
             break;
 
         case 3:
@@ -34,7 +33,7 @@ while (showMenu)
 
         case 4:
             Console.WriteLine("Você escolheu 'Listar todas as bebidas'!");
-            Repositorio.ListarBebida();
+            Repositorio.ListarBebida(bebida);
             //Menu.DisplayInicial();
             break;
 
